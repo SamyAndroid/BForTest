@@ -18,9 +18,9 @@ sealed class ScreenRoutes(
         title = R.string.author
     )
 
-    data object PokemonDetails: ScreenRoutes(
-        route = "pokemon_details_screen",
-        routeWithArgs = "pokemon_details_screen/{name}",
+    data object PokemonCard: ScreenRoutes(
+        route = "pokemon_card_screen",
+        routeWithArgs = "pokemon_card_screen/{name}",
         arguments = listOf(
             navArgument("name") { type = NavType.StringType }
         ),

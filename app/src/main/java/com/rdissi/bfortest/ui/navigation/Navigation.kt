@@ -22,14 +22,14 @@ fun Navigation(
         composable(route = ScreenRoutes.Home.route) {
             CatalogPage(
                 onItemClick = { pokemon ->
-                    navController.navigate(route = ScreenRoutes.PokemonDetails.route + "/" + pokemon.name)
+                    navController.navigate(route = ScreenRoutes.PokemonCard.route + "/" + pokemon.name)
                 },
             )
         }
         // Pokemon card screen
         composable(
-            route = ScreenRoutes.PokemonDetails.routeWithArgs,
-            arguments = ScreenRoutes.PokemonDetails.arguments,
+            route = ScreenRoutes.PokemonCard.routeWithArgs,
+            arguments = ScreenRoutes.PokemonCard.arguments,
         ) { navBackStackEntry ->
             val pokemonName = navBackStackEntry.arguments?.getString("name") ?: ""
             PokemonCardScreen(pokemonName = pokemonName)

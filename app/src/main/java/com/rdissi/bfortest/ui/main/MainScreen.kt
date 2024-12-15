@@ -77,7 +77,7 @@ fun updateTopBar(navController: NavHostController): TopBarInfo {
     val currentScreenRoutes =
         when (backStackEntry?.destination?.route) {
             ScreenRoutes.Home.route -> ScreenRoutes.Home
-            ScreenRoutes.PokemonDetails.routeWithArgs -> ScreenRoutes.PokemonDetails
+            ScreenRoutes.PokemonCard.routeWithArgs -> ScreenRoutes.PokemonCard
             else -> ScreenRoutes.Home
         }
     return when (currentScreenRoutes) {
@@ -88,7 +88,7 @@ fun updateTopBar(navController: NavHostController): TopBarInfo {
                 showShareIcon = true,
                 isVisible = true,
             )
-        ScreenRoutes.PokemonDetails ->
+        ScreenRoutes.PokemonCard ->
             TopBarInfo(
                 title = stringResource(id = currentScreenRoutes.title),
                 showBackIcon = true,

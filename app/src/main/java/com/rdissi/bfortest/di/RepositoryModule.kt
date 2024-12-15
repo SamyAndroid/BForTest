@@ -16,9 +16,9 @@ abstract class RepositoryModuleModule {
 
     @Singleton
     @Binds
-    abstract fun bindCatalogRepository(impl: PokemonRepositoryImpl): PokemonRepository
+    abstract fun bindPokemonRepository(impl: PokemonRepositoryImpl): PokemonRepository
 
     @Singleton
     @Binds
-    abstract fun bindCatalogRepository2(impl: CatalogRepositoryImpl): CatalogRepository
+    abstract fun bindCatalogRepository(impl: CatalogRepositoryImpl): CatalogRepository
 }

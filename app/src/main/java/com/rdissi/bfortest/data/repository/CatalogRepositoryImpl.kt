@@ -18,7 +18,8 @@ class CatalogRepositoryImpl @Inject constructor(
     @IoDispatcher private val dispatcher: CoroutineDispatcher,
 ) : CatalogRepository {
 
-    override fun getCatalog(): Flow<PagingData<Pokemon>> = Pager(
+    override fun getCatalog(): Flow<PagingData<Pokemon>> =
+        Pager(
             config = PagingConfig(pageSize = 8),
             pagingSourceFactory = { CatalogPagingDataSource(remoteDataSource) }
         ).flow

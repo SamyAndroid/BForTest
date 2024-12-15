@@ -1,8 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    id("dagger.hilt.android.plugin")
-    id("kotlin-kapt")
+    alias(libs.plugins.jetbrains.kotlin.kapt)
+    alias(libs.plugins.hilt.android)
 }
 
 android {
@@ -70,7 +70,6 @@ dependencies {
 
     // Hilt dependencies
     implementation(libs.hilt.android)
-    testImplementation(libs.jupiter)
     kapt(libs.hilt.android.compiler)
     implementation(libs.hilt.navigation.compose)
     kapt(libs.hilt.compiler)
@@ -91,6 +90,7 @@ dependencies {
     implementation(libs.paging.ktx)
     
     testImplementation(libs.junit)
+    testImplementation(libs.jupiter)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))

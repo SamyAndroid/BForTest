@@ -2,6 +2,7 @@
 agp = "8.5.2"
 kotlin = "1.9.0"
 hilt = "2.50"
+kapt = "1.8.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -78,4 +79,5 @@ turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+jetbrains-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kapt" }
 hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }

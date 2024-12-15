@@ -149,7 +149,7 @@ fun PokemonCardPage(
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun PokemonDetailsPagePreview() {
+fun PokemonCardPagePreview() {
     PokemonCardPage(
         pokemonCard = PokemonCard(
             id = 0,

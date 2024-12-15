@@ -15,13 +15,12 @@ import com.rdissi.bfortest.domain.model.PokemonCard
 import org.junit.After
 import org.junit.Assert.*
 import org.junit.Before
-
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mock
 import org.mockito.junit.MockitoJUnitRunner
 import org.mockito.kotlin.mock
-import kotlin.time.Duration.Companion.seconds
+
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @RunWith(MockitoJUnitRunner::class)
